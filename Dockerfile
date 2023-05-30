@@ -10,5 +10,6 @@ WORKDIR /workspace
 
 RUN apk add --no-cache picocom
 
-# run as unprivileged user
-USER 1000:1000
+# run as unprivileged user. usually the running user needs to be in "dialout" group to
+# access serial ports or modems. https://wiki.debian.org/SystemGroups#Other_System_Groups
+USER 1000:dialout
