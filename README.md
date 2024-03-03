@@ -1,9 +1,47 @@
 Container image for picocom - minimal dumb-terminal emulation program
 
 ## Usage
+
+### Connect to serial port (baud rate 115200)
+
 ```shell
-docker run --rm -it ghcr.io/r-xs-fi/picocom
+docker run --rm -it --device=/dev/ttyUSB0:/dev/serialport ghcr.io/r-xs-fi/picocom --baud=115200
 ```
+
+Outputs:
+```console
+picocom v3.1
+
+port is        : /dev/serialport
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        :
+omap is        :
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+```
+
+Tips:
+
+- press `ctrl` + `a` and then `ctrl` + `q` to disconnect
+
 
 ## Supported platforms
 

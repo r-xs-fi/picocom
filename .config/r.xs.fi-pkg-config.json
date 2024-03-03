@@ -1,0 +1,13 @@
+{
+	"usage_examples": [
+		{
+			"title": "Connect to serial port (baud rate 115200)",
+			"cmd": "--baud=115200",
+			"docker_opts": ["--device=/dev/ttyUSB0:/dev/serialport"],
+			"example_output": "picocom v3.1\n\nport is        : /dev/serialport\nflowcontrol    : none\nbaudrate is    : 115200\nparity is      : none\ndatabits are   : 8\nstopbits are   : 1\nescape is      : C-a\nlocal echo is  : no\nnoinit is      : no\nnoreset is     : no\nhangup is      : no\nnolock is      : no\nsend_cmd is    : sz -vv\nreceive_cmd is : rz -vv -E\nimap is        :\nomap is        :\nemap is        : crcrlf,delbs,\nlogfile is     : none\ninitstring     : none\nexit_after is  : not set\nexit is        : no\n\nType [C-a] [C-h] to see available commands\nTerminal ready",
+			"tips": [
+				"press `ctrl` + `a` and then `ctrl` + `q` to disconnect"
+			]
+		}
+	]
+}
