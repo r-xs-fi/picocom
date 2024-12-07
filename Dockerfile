@@ -1,6 +1,4 @@
-# edge because:
-# - `riscv64` only available in there
-FROM alpine:edge
+FROM alpine:latest
 
 # picocom supports positional args being declared before named args so user can still add settings like
 # baud rates etc.
