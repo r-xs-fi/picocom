@@ -1,4 +1,5 @@
 {
+	"supply_chain_descriptor": "alpine-package:picocom",
 	"usage_examples": [
 		{
 			"title": "Connect to serial port (baud rate 115200)",
